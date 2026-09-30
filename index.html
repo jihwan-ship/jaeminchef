@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>재민과 주방장</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="game">
+  <header><h1>재민과 주방장</h1><div id="hud"></div></header>
+
+  <section id="chef">
+    <div id="hat"></div>
+    <img id="face" src="face.png" alt="주방장 띵호">
+    <div id="coat"></div>
+    <div id="react"></div>
+    <p id="say"></p>
+  </section>
+
+  <section id="shelf">
+    <button data-i="veg">🧅<span>야채</span></button>
+    <button data-i="meat">🥩<span>고기</span></button>
+    <button data-i="oil">🛢️<span>식용유</span></button>
+    <button data-i="sauce">🫙<span>춘장</span></button>
+    <button data-i="sugar">🍬<span>설탕</span></button>
+    <button data-i="water">🫖<span>물</span></button>
+    <button data-i="noodle">🍜<span>생면</span></button>
+  </section>
+
+  <section id="tray">
+    <button data-i="fried">🍲<span>볶은 재료</span><b id="t-fried"></b></button>
+    <button data-i="jjang">🟤<span>짜장</span><b id="t-jjang"></b></button>
+    <button data-i="boiled">🍥<span>삶은 면</span><b id="t-boiled"></b></button>
+  </section>
+
+  <section id="stove">
+    <div class="vessel"><h2>웍</h2><p id="wok"></p><div class="gauge"><i id="g-wok"></i></div><button data-take="wok">꺼내기</button></div>
+    <div class="vessel"><h2>냄비</h2><p id="pot"></p><div class="gauge"><i id="g-pot"></i></div><button data-take="pot">꺼내기</button></div>
+    <div class="vessel"><h2>그릇</h2><p id="bowl"></p><div class="gauge off"></div><button id="done">완성</button></div>
+  </section>
+
+  <p id="help">게이지가 초록색(잘익힘)일 때 꺼내세요. 순서: 볶기 → 짜장 → 면 삶기 → 그릇에 담기</p>
+
+  <div id="overlay"><h2 id="ov-title"></h2><p id="ov-text"></p><button id="start">바로시작!</button></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
